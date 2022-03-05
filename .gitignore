@@ -1,5 +1,4 @@
 # VSCode extension
-.js
 
 # Store launch config in repo but not settings
 .vscode/settings.json
@@ -49,3 +48,4 @@ yarn-error.log
 /.versionrc.json
 RELEASE_NOTES.md
 
+*.js
