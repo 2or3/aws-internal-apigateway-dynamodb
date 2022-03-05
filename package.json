@@ -11,7 +11,7 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.147.0",
+    "@aws-cdk/assert": "^1.146.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "2.15.0",
@@ -21,14 +21,13 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "^1.147.0",
-    "@aws-cdk/aws-dynamodb": "^1.147.0",
-    "@aws-cdk/aws-iam": "^1.147.0",
-    "@aws-cdk/aws-logs": "^1.147.0",
-    "@aws-cdk/core": "1.147.0",
+    "@aws-cdk/aws-apigateway": "^1.146.0",
+    "@aws-cdk/aws-dynamodb": "^1.146.0",
+    "@aws-cdk/aws-iam": "^1.146.0",
+    "@aws-cdk/aws-logs": "^1.146.0",
+    "@aws-cdk/core": "^1.146.0",
     "@aws-solutions-constructs/aws-apigateway-dynamodb": "^1.146.0",
     "@aws-solutions-constructs/core": "^1.146.0",
-    "aws-cdk-lib": "2.15.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.16"
   }
