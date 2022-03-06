@@ -48,4 +48,6 @@ yarn-error.log
 /.versionrc.json
 RELEASE_NOTES.md
 
+# build
 *.js
+*.d.ts
