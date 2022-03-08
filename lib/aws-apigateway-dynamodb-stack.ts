@@ -1,8 +1,8 @@
-import { Construct, RemovalPolicy, Stack, StackProps } from '@aws-cdk/core';
+import { CfnOutput, Construct, RemovalPolicy, Stack, StackProps } from '@aws-cdk/core';
 import { AttributeType, BillingMode } from '@aws-cdk/aws-dynamodb';
 
 import { ApiGatewayToDynamoDBProps, ApiGatewayToDynamoDB } from "@aws-solutions-constructs/aws-apigateway-dynamodb";
-import { EndpointType } from '@aws-cdk/aws-apigateway';
+import { ApiKey, ApiKeySourceType, EndpointType } from '@aws-cdk/aws-apigateway';
 
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -18,9 +18,14 @@ export class AwsApigatewayDynamodbStack extends Stack {
       },
       apiGatewayProps: {
         restApiName: "DynamodbApi",
-      }
+        apiKeySourceType: ApiKeySourceType.HEADER,
+      },
+      allowCreateOperation: true,
+      allowReadOperation: true,
+      allowUpdateOperation: true,
+      allowDeleteOperation: true
     };
 
-    new ApiGatewayToDynamoDB(this, "ApiGatewayDynamodb", apigw_dynamodb_props);
+    const api_dyanmodb = new ApiGatewayToDynamoDB(this, "ApiGatewayDynamodb", apigw_dynamodb_props);
   }
 }
