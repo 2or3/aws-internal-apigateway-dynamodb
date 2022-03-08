@@ -21,8 +21,10 @@ export class AwsApigatewayDynamodbStack extends Stack {
         apiKeySourceType: ApiKeySourceType.HEADER,
       },
       allowCreateOperation: true,
+      createRequestTemplate: "{'test': 1}",
       allowReadOperation: true,
       allowUpdateOperation: true,
+      updateRequestTemplate: "{'test': 1}",
       allowDeleteOperation: true
     };
 
