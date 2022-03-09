@@ -28,19 +28,6 @@ export class AwsApigatewayDynamodbStack extends Stack {
       allowDeleteOperation: true
     };
 
-    const api_dyanmodb = new ApiGatewayToDynamoDB(this, "ApiGatewayDynamodb", apigw_dynamodb_props);
-    const api_gateway = api_dyanmodb.apiGateway;
-
-    const api_key = api_gateway.addApiKey("DynamoDBApiKey", {
-      apiKeyName: "DyanmoDBApiKey",
-    });
-
-    const usagePlan = api_gateway.addUsagePlan("DynamoDBUsagePlan", {
-      name: "DynamoDBUsagePlan",
-      apiKey: api_key
-    });
-    usagePlan.addApiStage({
-      stage: api_gateway.deploymentStage
-    });
+    new ApiGatewayToDynamoDB(this, "ApiGatewayDynamodb", apigw_dynamodb_props);
   }
 }
